@@ -2,9 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>Ro.SQLite.Data</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>Rodrigo Jiménez</Authors>
+    <Company>ro-mx</Company>
+    <CreatePackageOnBuild>ro-mx</CreatePackageOnBuild>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/rogithub/Ro.Sql.Data</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="../LICENSE" Pack="true" PackagePath="" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.114.4" />
   </ItemGroup>
 
