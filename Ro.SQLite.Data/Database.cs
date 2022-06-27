@@ -17,10 +17,7 @@ namespace Ro.SQLite.Data
 
         private DbConnection GetConnection()
         {
-            var c = new SQLiteConnection(this.ConnectionString);
-            c.EnableExtensions(true);
-            c.LoadExtension("System.Data.SQLite.dll", "sqlite3_fts5_init");
-            return c;
+            return new SQLiteConnection(this.ConnectionString);            
         }
 
         public Task<int> ExecuteNonQuery(DbCommand cmd)
