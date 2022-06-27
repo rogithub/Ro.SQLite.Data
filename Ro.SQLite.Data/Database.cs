@@ -20,7 +20,6 @@ namespace Ro.SQLite.Data
             var c = new SQLiteConnection(this.ConnectionString);
             c.EnableExtensions(true);
             c.LoadExtension("System.Data.SQLite.dll", "sqlite3_fts5_init");
-            var cmd = c.CreateCommand();
             return c;
         }
 
