@@ -18,8 +18,6 @@ namespace Ro.SQLite.Data
             if (conn.State != System.Data.ConnectionState.Open)
             {                
                 conn.Open();
-                conn.EnableExtensions(true);
-                conn.LoadExtension("System.Data.SQLite.dll", "sqlite3_fts5_init");            
             }
             return conn;
         }
