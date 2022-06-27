@@ -16,7 +16,7 @@ namespace Ro.SQLite.Data
         protected static IDbConnection OpenConnection(IDbConnection conn)
         {
             if (conn.State != System.Data.ConnectionState.Open)
-            {
+            {                
                 conn.Open();
                 conn.EnableExtensions(true);
                 conn.LoadExtension("System.Data.SQLite.dll", "sqlite3_fts5_init");            
