@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <PackageId>Ro.SQLite.Data</PackageId>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>Rodrigo Jiménez</Authors>
     <Company>ro-mx</Company>
     <CreatePackageOnBuild>ro-mx</CreatePackageOnBuild>
@@ -13,7 +13,10 @@
 
   <ItemGroup>
     <None Include="../LICENSE" Pack="true" PackagePath="" />
-    <PackageReference Include="System.Data.SQLite" Version="1.0.114.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.116" />
   </ItemGroup>
 
 </Project>

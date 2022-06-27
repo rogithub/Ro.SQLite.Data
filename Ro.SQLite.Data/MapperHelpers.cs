@@ -17,7 +17,7 @@ namespace Ro.SQLite.Data
             return Convert.ToString(o);
         };
 
-        public static Func<object, decimal> ToDecilmal = (o) =>
+        public static Func<object, decimal> ToDecimal = (o) =>
         {
             return Convert.ToDecimal(o);
         };

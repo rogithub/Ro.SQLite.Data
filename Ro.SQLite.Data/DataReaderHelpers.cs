@@ -17,9 +17,9 @@ namespace Ro.SQLite.Data
             return Mappers.ToStr(dr[key]);
         }
 
-        public static decimal GetDecilmal(this IDataReader dr, string key)
+        public static decimal GetDecimal(this IDataReader dr, string key)
         {
-            return Mappers.ToDecilmal(dr[key]);
+            return Mappers.ToDecimal(dr[key]);
         }
 
          public static float GetFloat(this IDataReader dr, string key)
