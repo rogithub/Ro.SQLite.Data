@@ -13,7 +13,7 @@ namespace Ro.SQLite.Data
         }
 
         public static string GetString(this IDataReader dr, string key)
-        {
+        {            
             return Mappers.ToStr(dr[key]);
         }
 
