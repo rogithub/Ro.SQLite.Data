@@ -15,14 +15,22 @@ namespace Ro.SQLite.Data
             this._interopPath = interopPath;
         }
 
+        public DbTasks()
+        {
+            
+        }
+
         public IDbConnection OpenConnection(IDbConnection conn)
         {                
             if (conn.State != System.Data.ConnectionState.Open)
             {                
                 conn.Open();
-                var c = conn as SQLiteConnection;
-                c.EnableExtensions(true);
-                c.LoadExtension(_interopPath, "sqlite3_fts5_init");
+                if (!string.IsNullOrWhiteSpace(_interopPath))
+                {
+                    var c = conn as SQLiteConnection;
+                    c.EnableExtensions(true);
+                    c.LoadExtension(_interopPath, "sqlite3_fts5_init");
+                }                
             }
             return conn;
         }
